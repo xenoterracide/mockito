@@ -1,4 +1,10 @@
 module org.mockito {
+    requires java.instrument;
+    requires jdk.attach;
+    requires net.bytebuddy;
+    requires net.bytebuddy.agent;
+    requires org.opentest4j;
+    requires static junit;
     exports org.mockito;
     exports org.mockito.codegen;
     exports org.mockito.configuration;
