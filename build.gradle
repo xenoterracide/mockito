@@ -25,6 +25,7 @@ plugins {
     id 'com.github.ben-manes.versions' version '0.51.0'
     id 'biz.aQute.bnd.builder' version '7.0.0'
     id 'ru.vyarus.animalsniffer' version '1.7.1'
+    id 'org.gradlex.java-module-testing' version '1.4'
 }
 
 description = 'Mockito mock objects library core API and implementation'
@@ -103,6 +104,14 @@ dependencies {
 
     signature 'org.codehaus.mojo.signature:java18:1.0@signature'
     signature 'net.sf.androidscents.signature:android-api-level-26:8.0.0_r2@signature'
+}
+
+javaModuleTesting.whitebox(testing.suites["test"]) {
+    requires.add("org.junit.jupiter.api")
+    requires.add("org.junit.jupiter.params")
+    requires.add("org.assertj.core")
+    requires.add("java.sql")
+    requires.add("java.management")
 }
 
 animalsniffer {
