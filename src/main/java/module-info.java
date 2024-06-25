@@ -27,4 +27,10 @@ module org.mockito {
     exports org.mockito.session;
     exports org.mockito.stubbing;
     exports org.mockito.verification;
+
+    // TODO: remove internal exports
+    exports org.mockito.internal;
+    exports org.mockito.internal.configuration.plugins;
+    exports org.mockito.internal.util.reflection;
+    exports org.mockito.internal.creation.bytebuddy;
 }
