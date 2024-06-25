@@ -5,7 +5,9 @@ module org.mockito {
     requires static net.bytebuddy;
     requires static net.bytebuddy.agent;
     requires static junit;
+
     opens org.mockito;
+
     exports org.mockito;
     exports org.mockito.codegen;
     exports org.mockito.configuration;
