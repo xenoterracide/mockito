@@ -1,9 +1,9 @@
 module org.mockito {
     requires java.instrument;
     requires jdk.attach; // GH #2952
-    requires net.bytebuddy;
-    requires net.bytebuddy.agent;
     requires org.opentest4j;
+    requires static net.bytebuddy;
+    requires static net.bytebuddy.agent;
     requires static junit;
     opens org.mockito;
     exports org.mockito;
